@@ -1,0 +1,29 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+using System;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace YourNamespace
+{
+  public class EventHubClient
+  {
+    const string SharedAccessSignature = <#=SharedAccessSignature#>;
+    const string Url = <#=EventHubRestUri#>
+    public async Task PostDataAsync(string jsonObjectToSend)
+    {
+      var httpClient = new HttpClient();
+
+      httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", SharedAccessSignature);
+
+      var content = new StringContent(jsonObjectToSend, Encoding.UTF8, "application/json");
+      content.Headers.Add("ContentType", "application/json");
+	
+      var result = await httpClient.PostAsync(url, content);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ThomasClaudiusHuber.Azure.EventHub.SharedAccessSignatureGenerator.View.UwpOutputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ThomasClaudiusHuber.Azure.EventHub.SharedAccessSignatureGenerator.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    <TextBlock Text="Universal Windows Platform - Event Hub Client" Background="#007ACC" Foreground="White" FontWeight="Bold" Padding="5"/>
+    <TextBox Grid.Row="1" TextWrapping="Wrap" IsReadOnly="True" Foreground="#56EAD6" Text="{Binding UwpEventHubClient,Mode=OneWay}" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+  </Grid>
+</UserControl>

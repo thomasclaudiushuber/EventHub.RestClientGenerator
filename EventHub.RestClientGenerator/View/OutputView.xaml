@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="ThomasClaudiusHuber.Azure.EventHub.SharedAccessSignatureGenerator.View.OutputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ThomasClaudiusHuber.Azure.EventHub.SharedAccessSignatureGenerator.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600">
+    <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="200"/>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="150"/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <TextBlock Grid.ColumnSpan="5" Text="Output" Background="#007ACC" Foreground="White" FontWeight="Bold" Padding="5" />
+
+    <Label Grid.Row="1" Content="Event Hub Namespace"/>
+    <TextBox Grid.Row="1" Grid.Column="1" IsReadOnly="True" Text="{Binding ConnectionDetails.EventHubNamespace,Mode=OneWay}"/>
+
+    <Label Grid.Row="1" Grid.Column="2" Content="Event Hub Name"/>
+    <TextBox Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" IsReadOnly="True"  Text="{Binding ConnectionDetails.EventHubName,Mode=OneWay}"/>
+
+    <Label Grid.Row="2" Content="Shared Access Key Name"/>
+    <TextBox Grid.Row="2" Grid.Column="1" IsReadOnly="True"  Text="{Binding ConnectionDetails.SharedAccessKeyName,Mode=OneWay}"/>
+
+    <Label Grid.Row="2" Grid.Column="2" Content="Shared Access Key"/>
+    <TextBox Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" IsReadOnly="True"  Text="{Binding ConnectionDetails.SharedAccessKey,Mode=OneWay}"/>
+
+    <Label Grid.Row="3" Content="Shared Access Signature"/>
+    <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" IsReadOnly="True"  Text="{Binding SharedAccessSignature,Mode=OneWay}"/>
+
+    <Label Grid.Row="4" Content="Event Hub Rest Uri"/>
+    <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" IsReadOnly="True"  Text="{Binding EventHubRestUri,Mode=OneWay}"/>
+  </Grid>
+</UserControl>

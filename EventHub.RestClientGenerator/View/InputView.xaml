@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ThomasClaudiusHuber.Azure.EventHub.SharedAccessSignatureGenerator.View.InputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ThomasClaudiusHuber.Azure.EventHub.SharedAccessSignatureGenerator.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="150"/>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="150"/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <TextBlock Grid.ColumnSpan="5" Text="Input" Background="#007ACC" Foreground="White" FontWeight="Bold" Padding="5"/>
+
+    <Label Grid.Row="1" Content="Event Hub Connection String"/>
+    <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Text="{Binding ConnectionString,UpdateSourceTrigger=PropertyChanged}" Height="50" TextWrapping="Wrap"/>
+
+    <Label Grid.Row="2" Content="Publisher / Device name"/>
+    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding PublisherName,UpdateSourceTrigger=PropertyChanged}" />
+
+    <Label Grid.Row="2" Grid.Column="2" Content="Token Lifetime (minutes)"/>
+    <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding TokenLifeTime,UpdateSourceTrigger=PropertyChanged}" />
+  </Grid>
+</UserControl>
