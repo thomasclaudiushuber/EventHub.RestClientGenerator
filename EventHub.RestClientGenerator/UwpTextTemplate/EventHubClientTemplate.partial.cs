@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTemplate
+namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTextTemplate
 {
 public partial  class EventHubClientTemplate
   {

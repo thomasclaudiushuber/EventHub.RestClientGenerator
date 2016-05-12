@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EventHub.RestClientGenerator"
         xmlns:view="clr-namespace:ThomasClaudiusHuber.Azure.EventHub.SharedAccessSignatureGenerator.View"
         mc:Ignorable="d"
         Title="Event Hub Rest Client Generator - by Thomas Claudius Huber" Height="600" Width="800" Background="#222222">
@@ -13,6 +12,7 @@
       <RowDefinition Height="Auto"/>
       <RowDefinition Height="Auto"/>
       <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
 
     <TextBlock FontWeight="Bold" Foreground="#CCCCCC" Margin="5" TextWrapping="Wrap">This tool generates the Shared Access Signature and a smal UWP-client-class to access the Rest-API of an Event Hub.
@@ -23,5 +23,7 @@
     <view:OutputView Grid.Row="2" Margin="0 10 0 0"/>
 
     <view:UwpOutputView Grid.Row="3" Margin="0 10 0 0"/>
+
+    <TextBlock Grid.Row="4" FontSize="10" TextAlignment="Right" Padding="5" Foreground="DarkGray" Background="Black">Event hub rest client generator by <Hyperlink NavigateUri="http://www.thomasclaudiushuber.com" RequestNavigate="Hyperlink_RequestNavigate">Thomas Claudius Huber</Hyperlink></TextBlock>
   </Grid>
 </Window>

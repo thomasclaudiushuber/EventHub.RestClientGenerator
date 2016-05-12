@@ -1,7 +1,6 @@
-﻿using Microsoft.ServiceBus;
-using System;
-using System.Linq;
+﻿using System;
 using ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.EventHubLogic;
+using ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTextTemplate;
 
 namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.ViewModel
 {
@@ -107,7 +106,7 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.ViewModel
           SharedAccessSignature = generator.GenerateSharedAccessSignature();
           EventHubRestUri = generator.GetEventHubRestUri();
 
-          UwpEventHubClient = new UwpTemplate.EventHubClientTemplate(SharedAccessSignature, EventHubRestUri).TransformText();
+          UwpEventHubClient = new EventHubClientTemplate(SharedAccessSignature, EventHubRestUri).TransformText();
         }
       }
 

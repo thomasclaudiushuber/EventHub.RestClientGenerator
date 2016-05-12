@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTemplate
+namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTextTemplate
 {
     using System.Linq;
     using System.Text;
@@ -18,7 +18,7 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTemplate
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\temp2\EventHub.SharedAccessSignatureGenerator\EventHub.RestClientGenerator\UwpTemplate\EventHubClientTemplate.tt"
+    #line 1 "D:\temp2\EventHub.RestClientGenerator\EventHub.RestClientGenerator\UwpTextTemplate\EventHubClientTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
     public partial class EventHubClientTemplate : EventHubClientTemplateBase
     {
@@ -32,14 +32,14 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTemplate
                     ".Tasks;\r\n\r\nnamespace YourNamespace\r\n{\r\n  public class EventHubClient\r\n  {\r\n    c" +
                     "onst string SharedAccessSignature = ");
             
-            #line 15 "D:\temp2\EventHub.SharedAccessSignatureGenerator\EventHub.RestClientGenerator\UwpTemplate\EventHubClientTemplate.tt"
+            #line 15 "D:\temp2\EventHub.RestClientGenerator\EventHub.RestClientGenerator\UwpTextTemplate\EventHubClientTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(SharedAccessSignature));
             
             #line default
             #line hidden
             this.Write(";\r\n    const string Url = ");
             
-            #line 16 "D:\temp2\EventHub.SharedAccessSignatureGenerator\EventHub.RestClientGenerator\UwpTemplate\EventHubClientTemplate.tt"
+            #line 16 "D:\temp2\EventHub.RestClientGenerator\EventHub.RestClientGenerator\UwpTextTemplate\EventHubClientTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(EventHubRestUri));
             
             #line default

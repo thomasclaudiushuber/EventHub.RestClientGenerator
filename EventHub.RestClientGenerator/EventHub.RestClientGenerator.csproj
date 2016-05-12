@@ -64,12 +64,12 @@
     <Compile Include="EventHubLogic\ConnectionDetails.cs" />
     <Compile Include="EventHubLogic\ConnectionStringExtractor.cs" />
     <Compile Include="EventHubLogic\RestUriAndSharedAccessSignatureGenerator.cs" />
-    <Compile Include="UwpTemplate\EventHubClientTemplate.cs">
+    <Compile Include="UwpTextTemplate\EventHubClientTemplate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EventHubClientTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="UwpTemplate\EventHubClientTemplate.partial.cs" />
+    <Compile Include="UwpTextTemplate\EventHubClientTemplate.partial.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\InputView.xaml.cs">
@@ -135,7 +135,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="UwpTemplate\EventHubClientTemplate.tt">
+    <Content Include="UwpTextTemplate\EventHubClientTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>EventHubClientTemplate.cs</LastGenOutput>
     </Content>
