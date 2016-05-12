@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.ViewModel;
 
-namespace EventHub.RestClientGenerator
+namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.View
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml
