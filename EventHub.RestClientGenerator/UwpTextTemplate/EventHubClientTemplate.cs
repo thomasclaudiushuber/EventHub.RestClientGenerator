@@ -45,7 +45,7 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTextTemplate
             #line default
             #line hidden
             this.Write(@"
-    public async Task PostDataAsync(string jsonObjectToSend)
+    public async Task<bool> PostDataAsync(string jsonObjectToSend)
     {
       var httpClient = new HttpClient();
 
@@ -55,6 +55,8 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTextTemplate
       content.Headers.Add(""ContentType"", ""application/json"");
 	
       var result = await httpClient.PostAsync(url, content);
+
+	  return result.IsSuccessStatusCode;
     }
   }
 }");
