@@ -7,6 +7,13 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.EventHubLogic
     public static bool TryExtract(string connectionString, out ConnectionDetails details)
     {
       details = null;
+      if(connectionString==null)
+      {
+        return false;
+      }
+
+      connectionString = connectionString.Trim();
+
       var connectionDetails = new ConnectionDetails();
       var items = connectionString.Split(';');
 

@@ -55,7 +55,7 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTextTemplate
       content.Headers.Add(""ContentType"", ""application/json"");
 	
       var result = await httpClient.PostAsync(url, content);
-
+      
 	  return result.IsSuccessStatusCode;
     }
   }
