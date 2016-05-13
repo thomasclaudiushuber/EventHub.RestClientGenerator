@@ -15,8 +15,8 @@
       <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
 
-    <TextBlock FontWeight="Bold" Foreground="#CCCCCC" Margin="5" TextWrapping="Wrap">This tool generates the Shared Access Signature and a smal UWP-client-class to access the Rest-API of an Event Hub.
-    Just enter the connection string, the publisher name and the token-timeout.</TextBlock>
+    <TextBlock FontWeight="Bold" Foreground="#CCCCCC" Margin="5" TextWrapping="Wrap">This tool generates the Shared Access Signature and a smal UWP-client-class to access the Rest-API of an Azure Event Hub.
+    Just enter the connection string, the publisher name and the token lifetime. Find more information by <Hyperlink NavigateUri="http://www.thomasclaudiushuber.com/blog/2016/05/13/calling-the-azure-event-hub-rest-api-from-uwp-wpf-and-any-other-net-core-client" RequestNavigate="Hyperlink_RequestNavigate">clicking here</Hyperlink>.</TextBlock>
 
     <view:InputView Grid.Row="1" Margin="0 10 0 0"/>
 
