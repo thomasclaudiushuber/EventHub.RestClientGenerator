@@ -24,7 +24,7 @@
     <Label Grid.Row="1" Content="Event Hub Connection String"/>
     <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Text="{Binding ConnectionString,UpdateSourceTrigger=PropertyChanged}" Height="50" TextWrapping="Wrap"/>
 
-    <Label Grid.Row="2" Content="Publisher / Device name"/>
+    <Label Grid.Row="2" Content="Device name (optional)"/>
     <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding PublisherName,UpdateSourceTrigger=PropertyChanged}" />
 
     <Label Grid.Row="2" Grid.Column="2" Content="Token Lifetime"/>

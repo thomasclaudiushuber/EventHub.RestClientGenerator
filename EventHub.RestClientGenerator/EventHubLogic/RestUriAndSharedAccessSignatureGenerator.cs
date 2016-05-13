@@ -9,7 +9,7 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.EventHubLogic
     private string _publisherName;
     private TimeSpan _tokenLifeTime;
 
-    public RestUriAndSharedAccessSignatureGenerator(ConnectionDetails connectionDetails,string publisherName,TimeSpan tokenLifeTime)
+    public RestUriAndSharedAccessSignatureGenerator(ConnectionDetails connectionDetails, string publisherName, TimeSpan tokenLifeTime)
     {
       _connectionDetails = connectionDetails;
       _publisherName = publisherName;
@@ -18,9 +18,18 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.EventHubLogic
 
     public string GetEventHubRestUri()
     {
-      return ServiceBusEnvironment.CreateServiceUri("https", _connectionDetails.EventHubNamespace, $"{_connectionDetails.EventHubName}/publishers/{_publisherName}/messages")
-           .ToString()
-           .Trim('/');
+      if (string.IsNullOrWhiteSpace(_publisherName))
+      {
+        return ServiceBusEnvironment.CreateServiceUri("https", _connectionDetails.EventHubNamespace, $"{_connectionDetails.EventHubName}/messages")
+            .ToString()
+            .Trim('/');
+      }
+      else
+      {
+        return ServiceBusEnvironment.CreateServiceUri("https", _connectionDetails.EventHubNamespace, $"{_connectionDetails.EventHubName}/publishers/{_publisherName}/messages")
+             .ToString()
+             .Trim('/');
+      }
     }
 
     public string GenerateSharedAccessSignature()

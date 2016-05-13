@@ -170,12 +170,11 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.ViewModel
         }
       }
 
-      // TODO: Put this in a try-catch to find out too big values
+      // Note: Put this in a try-catch to find out too big values for TimeSpan
       TimeSpan tokenLifeTime = GetTokenLifeTime(tokenLifeTimeInt);
 
       if (!_errorsByPropertyName.Any()
-        && !string.IsNullOrWhiteSpace(ConnectionString)
-        && !string.IsNullOrWhiteSpace(PublisherName))
+        && !string.IsNullOrWhiteSpace(ConnectionString))
       {
         var generator = new RestUriAndSharedAccessSignatureGenerator(details, PublisherName, tokenLifeTime);
         SharedAccessSignature = generator.GenerateSharedAccessSignature();
