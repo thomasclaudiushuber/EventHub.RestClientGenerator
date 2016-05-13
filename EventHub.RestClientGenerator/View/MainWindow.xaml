@@ -24,6 +24,6 @@
 
     <view:UwpOutputView Grid.Row="3" Margin="0 10 0 0"/>
 
-    <TextBlock Grid.Row="4" FontSize="10" TextAlignment="Right" Padding="5" Foreground="DarkGray" Background="Black">Event hub rest client generator by <Hyperlink NavigateUri="http://www.thomasclaudiushuber.com" RequestNavigate="Hyperlink_RequestNavigate">Thomas Claudius Huber</Hyperlink></TextBlock>
+    <TextBlock Grid.Row="4" FontSize="10" TextAlignment="Right" Padding="5" Foreground="DarkGray" Background="Black">Event hub rest client generator <Run Text="" x:Name="txtVersion"/> by <Hyperlink NavigateUri="http://www.thomasclaudiushuber.com" RequestNavigate="Hyperlink_RequestNavigate">Thomas Claudius Huber</Hyperlink></TextBlock>
   </Grid>
 </Window>

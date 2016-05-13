@@ -10,6 +10,8 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.View
     {
       InitializeComponent();
       DataContext = new MainViewModel();
+
+      txtVersion.Text = GetType().Assembly.GetName().Version.ToString();
     }
 
     private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
