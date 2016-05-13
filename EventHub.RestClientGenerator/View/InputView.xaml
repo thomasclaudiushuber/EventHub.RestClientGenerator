@@ -21,18 +21,21 @@
     </Grid.ColumnDefinitions>
     <TextBlock Grid.ColumnSpan="5" Text="Input" Background="#007ACC" Foreground="White" FontWeight="Bold" Padding="5"/>
 
-    <Label Grid.Row="1" Content="Event Hub Connection String"/>
+    <Label Grid.Row="1">
+      <TextBlock>Event Hub<LineBreak/>Connection String</TextBlock></Label>
     <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Text="{Binding ConnectionString,UpdateSourceTrigger=PropertyChanged}" Height="50" TextWrapping="Wrap"/>
 
-    <Label Grid.Row="2" Content="Device name (optional)"/>
-    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding PublisherName,UpdateSourceTrigger=PropertyChanged}" />
-
-    <Label Grid.Row="2" Grid.Column="2" Content="Token Lifetime"/>
-    <DockPanel Grid.Row="2" Grid.Column="3">
+    <Label Grid.Row="2" Content="Token Lifetime"/>
+    <DockPanel Grid.Row="2" Grid.Column="1">
       <ComboBox DockPanel.Dock="Right" Margin="5" Background="Black"
                 ItemsSource="{Binding TokenLifeTimeUnits}"
                 SelectedItem="{Binding TokenLifeTimeUnit,Mode=TwoWay}" Width="70"/>
       <TextBox Text="{Binding TokenLifeTime,UpdateSourceTrigger=PropertyChanged}" />
     </DockPanel>
+
+
+    <Label Grid.Row="2" Grid.Column="2" Content="Publisher/Device name (optional)"/>
+    <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding PublisherName,UpdateSourceTrigger=PropertyChanged}" />
+
   </Grid>
 </UserControl>

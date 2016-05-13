@@ -30,21 +30,21 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTextTemplate
         {
             this.Write("using System;\r\nusing System.Net.Http;\r\nusing System.Text;\r\nusing System.Threading" +
                     ".Tasks;\r\n\r\nnamespace YourNamespace\r\n{\r\n  public class EventHubClient\r\n  {\r\n    c" +
-                    "onst string SharedAccessSignature = ");
+                    "onst string SharedAccessSignature = \"");
             
             #line 15 "D:\temp2\EventHub.RestClientGenerator\EventHub.RestClientGenerator\UwpTextTemplate\EventHubClientTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(SharedAccessSignature));
             
             #line default
             #line hidden
-            this.Write(";\r\n    const string Url = ");
+            this.Write("\";\r\n    const string EventHubRestUri = \"");
             
             #line 16 "D:\temp2\EventHub.RestClientGenerator\EventHub.RestClientGenerator\UwpTextTemplate\EventHubClientTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(EventHubRestUri));
             
             #line default
             #line hidden
-            this.Write(@"
+            this.Write(@""";
     public async Task<bool> PostDataAsync(string jsonObjectToSend)
     {
       var httpClient = new HttpClient();
@@ -54,7 +54,7 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.UwpTextTemplate
       var content = new StringContent(jsonObjectToSend, Encoding.UTF8, ""application/json"");
       content.Headers.Add(""ContentType"", ""application/json"");
 	
-      var result = await httpClient.PostAsync(url, content);
+      var result = await httpClient.PostAsync(EventHubRestUri, content);
       
 	  return result.IsSuccessStatusCode;
     }

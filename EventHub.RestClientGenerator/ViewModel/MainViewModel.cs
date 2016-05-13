@@ -134,6 +134,11 @@ namespace ThomasClaudiusHuber.Azure.EventHub.RestClientGenerator.ViewModel
         ConnectionDetails = null;
         _connectionString = "";
         OnPropertyChanged(nameof(ConnectionString));
+        if(_errorsByPropertyName.ContainsKey(nameof(ConnectionString)))
+        {
+          _errorsByPropertyName.Remove(nameof(ConnectionString));
+          OnErrorsChanged(nameof(ConnectionString));
+        }
       }
       else
       {
